@@ -11,7 +11,7 @@ ARG buildtype
 
 # Project sources
 COPY . /workdir
-RUN npm run $buildtype
+RUN npm run build:prod:en
 
 FROM nginx:1.17.5-alpine
 COPY --from=BUILDER /workdir/dist/angular8-springboot-client /usr/share/nginx/html
