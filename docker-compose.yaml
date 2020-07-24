@@ -21,7 +21,7 @@ services:
     build: ./springboot2-app
     environment:
       - DATABASE_HOSTNAME=database
-      - DATABASE_PORT=5432
+      - DATABASE_PORT=54320
       - DATABASE_USERNAME=springboot
       - DATABASE_PASSWORD=changeme
     labels:
