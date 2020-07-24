@@ -11,7 +11,7 @@ services:
         - buildtype=build-prod
     labels:
       - "traefik.backend=frontend"
-      - "traefik.frontend.rule=Host:3.86.72.245"
+      - "traefik.frontend.rule=Host:192.168.56.102"
     depends_on:
       - backend
       - database
@@ -26,7 +26,7 @@ services:
       - DATABASE_PASSWORD=changeme
     labels:
       - "traefik.backend=backend"
-      - "traefik.frontend.rule=Host:3.86.72.245"
+      - "traefik.frontend.rule=Host:192.168.56.102"
     links:
       - database
     
